@@ -17,13 +17,13 @@ const Product = () => {
       <img className="lg:h-[680px] md:h-[450px] h-[300px] mx-auto" src={prop?.image_url}></img>
       </div>
       <div className='col-span-2 mx-auto font-serif px-10'>
-        <h2 className='lg:text-8xl md:text-6xl text-2xl font-semibold '>{prop?.name}</h2><br></br>
+        <h2 className='lg:text-8xl md:text-6xl text-3xl font-semibold '>{prop?.name}</h2><br></br>
         <p className='lg:text-2xl lg:mt-5 md:text-2xl text-xl'>{prop?.description}</p><br></br>
-        <p className='lg:text-xl text-lg'>
-          <v className="font-semibold">First Brewed:</v> {prop?.first_brewed}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          <v className="font-semibold">Volume:</v> {prop?.volume.value}{prop?.volume.unit}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          <v className="font-semibold">Alcohol %:</v> {prop?.abv}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
-          <v className="font-semibold">Boil volume:</v> {prop?.boil_volume.value} {prop?.boil_volume.unit}
+        <p className='lg:text-xl text-lg grid lg:grid-cols-10 gap-2'>
+          <b className='col-span-3 font-normal'><v className="font-semibold">First Brewed:</v> {prop?.first_brewed}</b>
+          <b className='col-span-2 font-normal'><v className="font-semibold">Volume:</v> {prop?.volume.value}{prop?.volume.unit}</b>
+          <b className='col-span-2 font-normal'><v className="font-semibold">Alcohol %:</v> {prop?.abv}</b>
+          <b className='col-span-3 font-normal'><v className="font-semibold">Boil volume:</v> {prop?.boil_volume.value} {prop?.boil_volume.unit}</b>
         </p><br></br>
         <ul className='lg:text-2xl text-xl font-semibold '>Food Pairing</ul>{prop?.food_pairing.map((foodP)=>
           <li className='text-xl'>{foodP}</li>
