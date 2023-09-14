@@ -12,11 +12,11 @@ const Product = () => {
   },[])
 
   return (
-    <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-5 mt-10 mx-auto' >
+    <div className='grid lg:grid-cols-3  grid-cols-1 px-5  mx-auto' >
       <div className='col-span-1 px-[80px] '>
-      <img className="lg:h-[680px] md:h-[450px] h-[300px] mx-auto" src={prop?.image_url}></img>
+      <img className="lg:h-[680px] md:h-[450px] h-[300px] mx-auto mt-10" src={prop?.image_url}></img>
       </div>
-      <div className='col-span-2 mx-auto font-serif px-10'>
+      <div className='col-span-2 mx-auto font-serif px-10 mt-10'>
         <h2 className='lg:text-8xl md:text-6xl text-3xl font-semibold '>{prop?.name}</h2><br></br>
         <p className='lg:text-2xl lg:mt-5 md:text-2xl text-xl'>{prop?.description}</p><br></br>
         <p className='lg:text-xl text-lg grid lg:grid-cols-10 gap-2'>
